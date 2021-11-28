@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, Index, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Endereco } from "./Endereco";
 import { Foto } from "./Foto";
 
@@ -9,6 +9,7 @@ export class Usuario {
     id: number;
 
     @Column()
+    @Index()
     nome: string;
 
     @Column()
