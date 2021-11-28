@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/henriquels25/fotos-api#readme",
   "devDependencies": {
+    "@types/node": "^16.11.10",
     "nodemon": "^2.0.15",
     "rimraf": "^3.0.2",
     "ts-node": "^10.4.0",

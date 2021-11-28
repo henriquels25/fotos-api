@@ -6,5 +6,9 @@
     "password": "postgres",
     "database": "fotos-db",
     "synchronize": true,
-    "entities": ["**/*entities/*.js"]
+    "entities": ["**/entities/*.js"],
+    "migrations": ["migrations/*.ts"],
+    "cli": {
+        "migrationsDir": "migrations"
+    }
  }

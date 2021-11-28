@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn, ManyToOne } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from "typeorm";
 import { Usuario } from "./Usuario";
 
 @Entity()
@@ -10,5 +10,6 @@ export class Foto {
     url: string;
 
     @ManyToOne(() => Usuario)
-    usuario: Promise<Usuario>;
+    @JoinColumn({ name: 'usuario_id' })
+    usuario: Usuario;
 }

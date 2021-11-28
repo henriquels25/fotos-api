@@ -37,7 +37,7 @@ app.post("/fotos", async function(req: Request, res: Response) {
         console.log(e);
         return res.status(500).send(e);
     };
-    return res.status(201).send;
+    return res.status(201).send();
 });
 
 app.get("/fotos", async function(req: Request, res: Response) {
@@ -53,3 +53,4 @@ app.get("/fotos", async function(req: Request, res: Response) {
 
 // start express server
 app.listen(8080);
+console.log('Application running on port 8080')

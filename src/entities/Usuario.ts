@@ -11,11 +11,14 @@ export class Usuario {
     @Column()
     nome: string;
 
+    @Column()
+    idade: number;
+
     @OneToMany(() => Foto, foto => foto.usuario, {eager: true})
     fotos: Foto[];
 
     @OneToOne(() => Endereco, endereco => endereco.usuario,
                  {cascade: true})
-    @JoinColumn()
+    @JoinColumn({ name: 'endereco_id' })  
     endereco: Endereco;
 }
