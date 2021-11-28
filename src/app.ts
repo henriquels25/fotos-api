@@ -43,11 +43,6 @@ app.post("/fotos", async function(req: Request, res: Response) {
 app.get("/fotos", async function(req: Request, res: Response) {
     const fotosRepo = getRepository(Foto);
     const fotos = await fotosRepo.find();
-    fotos.forEach(async f => {
-        const usuarioFoto = await f.usuario;
-
-        console.log(usuarioFoto.id);
-    })
     return res.send(fotos);
 });
 

@@ -5,10 +5,10 @@
     "username": "postgres",
     "password": "postgres",
     "database": "fotos-db",
-    "synchronize": true,
+    "synchronize": false,
     "entities": ["**/entities/*.js"],
-    "migrations": ["migrations/*.ts"],
+    "migrations": ["build/migrations/*.js"],
     "cli": {
-        "migrationsDir": "migrations"
+        "migrationsDir": "src/migrations"
     }
  }
