@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, Index, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, Index, OneToMany, OneToOne, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { Endereco } from "./Endereco";
 import { Foto } from "./Foto";
 
@@ -22,4 +22,10 @@ export class Usuario {
                  {cascade: true})
     @JoinColumn({ name: 'endereco_id' })  
     endereco: Endereco;
+
+    @CreateDateColumn({name: 'data_criacao', type: 'timestamptz'})
+    dataCriacao: Date; 
+
+    @UpdateDateColumn({name: 'data_atualizacao', type: 'timestamptz'})
+    dataAtualizacao: Date;
 }
