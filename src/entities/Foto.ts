@@ -6,7 +6,7 @@ export class Foto {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({length: 255})
+    @Column()
     url: string;
 
     @ManyToOne(() => Usuario)

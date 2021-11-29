@@ -12,8 +12,8 @@ export class Usuario {
     @Index()
     nome: string;
 
-    @Column()
-    idade: number;
+    @Column('date', {name: "data_nascimento", nullable: true})
+    dataNascimento: Date;
 
     @OneToMany(() => Foto, foto => foto.usuario, {eager: true})
     fotos: Foto[];
